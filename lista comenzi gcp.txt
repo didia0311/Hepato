@@ -1,0 +1,34 @@
+(selectie proiect in sdk)
+
+gcloud init (reinitiare cu 1 de 3 ori) si apoi n
+gcloud config set project coral-heuristic-475113-g8
+gcloud config set compute/zone europe-north1-a
+
+
+(pornire masina virtuala creata)
+
+gcloud compute instances start proiectvm --zone=europe-north1-a
+
+
+(copiere continut folder Hepato)
+gcloud compute scp "C:\Users\Didia\Desktop\Hepato\*" proiectvm:/home/Didia/Hepato/ --recurse --zone=europe-north1-a --tunnel-through-iap
+
+
+(conectare masina virtuala)
+
+gcloud compute ssh proiectvm --zone=europe-north1-a --tunnel-through-iap
+
+
+(rulare script python) in Putty!!
+
+cd Hepato
+source venv/bin/activate
+python Balancing.py
+
+
+oprire aplicatie cu ctrl + z.
+
+
+oprire masina virtuala din comanda 
+
+gcloud compute instances stop proiectvm --zone=europe-north1-a
