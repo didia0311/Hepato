@@ -1,6 +1,6 @@
 # Instalare librării necesare (rulează o singură dată)
 # pip install rdkit-pypi scikit-learn xgboost pandas numpy shap tensorflow matplotlib seaborn
-
+# ABC
 import pandas as pd
 import numpy as np
 from rdkit import Chem
