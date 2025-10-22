@@ -1,0 +1,8 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+.vscode/
+__pychache__
+Hepatox.py 
+molecula.py
+rezultatmol.py 
+toategraficele.py 
